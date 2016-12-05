@@ -12,7 +12,7 @@ import '@angular/material';
 // TODO: Temporarily disabling firebase until https://github.com/angular/angularfire2/issues/543 is fixed
 //  AngularFire beta.5 also now required AngularCLI
 //  Need to investigate whether we can use it without the CLI
-// import 'angularfire2';
+// import {AngularFire, FirebaseListObservable} from 'angularfire2';
 
 // RxJS
 import 'rxjs';

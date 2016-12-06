@@ -66,7 +66,9 @@ export class SpotsListComponent implements OnInit {
             lng: r.lng
           };
         });
-        this.updateFilteredSpots(this.destinationLocationService.current.getValue());
+        this.updateFilteredSpots(
+          this.destinationLocationService.current.getValue()
+        );
       });
     });
     destinationLocationService.current.subscribe(res => {
@@ -89,7 +91,8 @@ export class SpotsListComponent implements OnInit {
 
   toggleExapand() {
     this.expanded = !this.expanded;
-    let spotsPositions = this.filteredSpots.map(function(spot){
+    let spotsPositions = this.filteredSpots
+    .map(function(spot){
       return {
         lat: spot.lat,
         lng: spot.lng
@@ -97,13 +100,15 @@ export class SpotsListComponent implements OnInit {
     });
     if (spotsPositions.length > 0) {
       let me = this;
-      this.distanceService.getDistanceToDestinationFrom(spotsPositions).then(function(distance){
-        for (let i = 0; i < distance.length; i++) {
+      this.distanceService
+        .getDistanceToDestinationFrom(spotsPositions)
+        .then(function(distance){
+          for (let i = 0; i < distance.length; i++) {
             me.filteredSpots[i].distanceToDest = distance[i];
-        }
-      }).catch(function(err){
-        console.log(err);
-      });
+          }
+        }).catch(function(err){
+          console.log(err);
+        });
     }
   }
 

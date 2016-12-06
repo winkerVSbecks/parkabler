@@ -5,6 +5,7 @@ import { Observable } from 'rxjs/Observable';
 
 // If the user is offline, use this data:
 const data = require('./data/spots$.json');
+console.log(data);
 
 @Injectable()
 export class SpotApiService {

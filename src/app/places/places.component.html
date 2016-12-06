@@ -2,8 +2,10 @@
   <button md-mini-fab color="secondary" class="search" disabled>
     <md-icon>search</md-icon>
   </button>
+
   <input #placesInput type="text"/>
-  <button md-mini-fab color="primary" class="recenter" (click)="recenter()">
-    <md-icon svgSrc="./img/icons/ic_my_location.svg"></md-icon>
-  </button>
+
+  <div class="recenter">
+    <ng-content></ng-content>
+  </div>
 </div>

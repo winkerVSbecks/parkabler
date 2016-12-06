@@ -5,7 +5,9 @@
   </svg>
 </div>
 
-<div class="container" [ngClass]="{ editing: enteringSpot }" [ngSwitch]="state">
+<div class="container"
+  [ngClass]="{ editing: enteringSpot }"
+  [ngSwitch]="state">
   <!-- State.AddLocation -->
   <div *ngSwitchCase="states.AddLocation">
     <md-card class="md-card-raised">

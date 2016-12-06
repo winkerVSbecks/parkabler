@@ -2,10 +2,18 @@
 <div class="content">
   <div class="map-container">
     <main-map></main-map>
-    <places-search></places-search>
+    <places-search>
+      <button md-mini-fab
+        color="primary"
+        class="recenter"
+        (click)="recenter()">
+        <md-icon svgSrc="./img/icons/ic_my_location.svg">
+        </md-icon>
+      </button>
+    </places-search>
   </div>
   <div class="bottom-drawer-container">
-    <edit-spot ></edit-spot>
+    <edit-spot></edit-spot>
     <spots-list></spots-list>
   </div>
 </div>

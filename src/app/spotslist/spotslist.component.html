@@ -1,14 +1,24 @@
 <div class="container" *ngIf="enabled && !hidden" [ngClass]="{ expanded: expanded }">
-  <button md-button class="header" (click)="toggleExapand()">
+  <button md-button
+    class="header"
+    (click)="toggleExapand()">
     {{numSpot}} spots near destination
   </button>
 
-  <md-nav-list class="content" *ngIf="expanded">
-    <md-list-item *ngFor="let spot of filteredSpots" class="list-item" (click)="onClickSpot(spot)">
+  <md-nav-list class="content"
+    *ngIf="expanded">
+
+    <md-list-item *ngFor="let spot of filteredSpots"
+      class="list-item"
+      (click)="onClickSpot(spot)">
       <div md-line>
         <span class="large-text">1 Space</span>
-        <a class="right" href="http://maps.google.com/maps?daddr={{spot.lat}},{{spot.lng}}" target="_blank">
-          <img md-list-avatar src="img/icons/ic_directions.svg" alt="directions">
+        <a class="right"
+          href="http://maps.google.com/maps?daddr={{spot.lat}},{{spot.lng}}"
+          target="_blank">
+          <img md-list-avatar
+            src="img/icons/ic_directions.svg"
+            alt="directions">
         </a>
       </div>
       <div md-line>
@@ -22,5 +32,6 @@
       </div>
       <div md-line class="divider"></div>
     </md-list-item>
+
   </md-nav-list>
 </div>
